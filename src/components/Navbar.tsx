@@ -42,7 +42,7 @@ export const Navbar = () => {
   );
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-primary/95 to-accent/95 backdrop-blur-md">
+    <nav className="fixed top-0 w-full z-50 bg-primary/95 backdrop-blur-md">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
