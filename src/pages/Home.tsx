@@ -120,6 +120,182 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Meet Dominique
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  With over 15 years of experience in strategic consulting and personal development, 
+                  Dominique has helped thousands of individuals and organizations achieve breakthrough results. 
+                  Combining expertise in psychology, technology, and business strategy.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Certified Professional Coach (ICF)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Master's in Organizational Psychology</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Former Tech Executive at Fortune 500</span>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="aspect-square bg-gradient-soft rounded-2xl p-8 shadow-soft">
+                    <div className="w-full h-full bg-muted/30 rounded-xl flex items-center justify-center">
+                      <span className="text-4xl">👤</span>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-xl"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-soft">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              What Clients Say
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real stories from people whose lives have been transformed
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-500 text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                  "Dominique's coaching completely transformed my approach to leadership. 
+                  The strategies we developed increased my team's productivity by 40%."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-semibold text-primary">SJ</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Sarah Johnson</p>
+                    <p className="text-sm text-muted-foreground">CEO, TechStart Inc.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-500 text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                  "Working with Dominique saved our marriage. The communication tools and 
+                  intimacy coaching created a deeper connection than we ever thought possible."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-semibold text-primary">M&A</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Mike & Anna Chen</p>
+                    <p className="text-sm text-muted-foreground">Married 12 years</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-500 text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                  "I was struggling with burnout and unhappiness. Dominique's happiness 
+                  coaching gave me tools to find joy and purpose again. Life-changing!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-semibold text-primary">DR</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">David Rodriguez</p>
+                    <p className="text-sm text-muted-foreground">Software Engineer</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Logos Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Trusted By Leading Organizations
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Speaking engagements, consulting partnerships, and transformational work
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto items-center">
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">GOOGLE</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">MICROSOFT</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">APPLE</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">TESLA</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">NETFLIX</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">STANFORD</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">MIT</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">HARVARD</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">TEDx</div>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
+              <div className="text-2xl font-bold text-muted-foreground">Y COMBINATOR</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
