@@ -143,7 +143,7 @@ export const Home = () => {
                 <div className="relative">
                   <div className="aspect-square bg-gradient-soft rounded-2xl p-8 shadow-soft">
                     <div className="w-full h-full bg-muted/30 rounded-xl flex items-center justify-center">
-                      <img src="/public/images/ChristianDominique.jpg" alt="Dominique" className="w-full h-full object-cover rounded-xl" />
+                      <img src="/images/ChristianDominique.jpg" alt="Dominique" className="w-full h-full object-cover rounded-xl" />
                     </div>
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-xl"></div>
