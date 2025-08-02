@@ -47,7 +47,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-white">
-            <img src="/public/logo-white.png" alt="Logo" className="h-12" />
+            <img src="/logo-white.png" alt="Logo" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
