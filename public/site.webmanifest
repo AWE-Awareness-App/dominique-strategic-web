@@ -1,0 +1,20 @@
+{
+  "name": "Dominique Strategic Consulting",
+  "short_name": "Dominique SC",
+  "description": "Strategic consulting services for your business growth",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

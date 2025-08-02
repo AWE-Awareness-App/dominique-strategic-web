@@ -125,35 +125,25 @@ export const Home = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Meet Dominique
-                </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  With over 15 years of experience in strategic consulting and personal development, 
-                  Dominique has helped thousands of individuals and organizations achieve breakthrough results. 
-                  Combining expertise in psychology, technology, and business strategy.
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-foreground">{t('founder.name')}</h2>
+                <h3 className="text-xl text-primary font-medium">{t('founder.title')}</h3>
+                <p className="text-muted-foreground">
+                  {t('founder.description')}
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Certified Professional Coach (ICF)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Master's in Organizational Psychology</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Former Tech Executive at Fortune 500</span>
-                  </div>
+                <div>
+                  <a href="tel:+15145011194" className="text-muted-foreground hover:text-primary transition-colors">{t('founder.phone')}</a>
+                  <br />
+                  <a href="mailto:christian@dominiquestrategic.com" className="text-muted-foreground hover:text-primary transition-colors">{t('founder.email')}</a>
+                  <br />
+                  <span className="text-muted-foreground">{t('founder.office')}</span>
                 </div>
               </div>
               <div className="order-1 lg:order-2">
                 <div className="relative">
                   <div className="aspect-square bg-gradient-soft rounded-2xl p-8 shadow-soft">
                     <div className="w-full h-full bg-muted/30 rounded-xl flex items-center justify-center">
-                      <span className="text-4xl">👤</span>
+                      <img src="/public/ChristianDominique.jpg" alt="Dominique" className="w-full h-full object-cover rounded-xl" />
                     </div>
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-xl"></div>

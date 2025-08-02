@@ -46,6 +46,14 @@ const translations = {
     'blog.subtitle': 'Discover tips, insights, and inspiration for your personal and professional growth',
     'blog.readMore': 'Read More',
     
+    // Founder Section
+    'founder.name': 'Christian Dominique, BSc, MBA',
+    'founder.title': 'Founder and Executive Director',
+    'founder.description': 'Psychology, neuroscience, business strategy and coach. Christian is a digital wellness and happiness expert. He is an author and speaker with technology, international management and scientific research expertise.',
+    'founder.phone': 'Phone: (514) 501-1194',
+    'founder.email': 'Email: christian@dominiquestrategic.com',
+    'founder.office': 'Office: 88 Boul. St. Joseph E., Montreal, QC – H2T 1H1',
+    
     // Contact
     'contact.title': 'Get in Touch',
     'contact.subtitle': 'Ready to start your transformation journey?',
@@ -91,6 +99,14 @@ const translations = {
     'blog.readMore': 'Lire Plus',
     
     // Contact
+    // Founder Section - French
+    'founder.name': 'Christian Dominique, BSc, MBA',
+    'founder.title': 'Fondateur et Directeur Général',
+    'founder.description': 'Psychologie, neurosciences, stratégie d\'entreprise et coaching. Christian est un expert en bien-être numérique et en bonheur. Il est auteur et conférencier avec une expertise en technologie, gestion internationale et recherche scientifique.',
+    'founder.phone': 'Téléphone : (514) 501-1194',
+    'founder.email': 'Courriel : christian@dominiquestrategic.com',
+    'founder.office': 'Bureau : 88 Boul. St. Joseph E., Montréal, QC – H2T 1H1',
+    
     'contact.title': 'Nous Contacter',
     'contact.subtitle': 'Prêt à commencer votre parcours de transformation ?',
     'contact.name': 'Nom Complet',
@@ -135,6 +151,14 @@ const translations = {
     'blog.readMore': 'Leer Más',
     
     // Contact
+    // Founder Section - Spanish
+    'founder.name': 'Christian Dominique, BSc, MBA',
+    'founder.title': 'Fundador y Director Ejecutivo',
+    'founder.description': 'Psicología, neurociencia, estrategia empresarial y coaching. Christian es un experto en bienestar digital y felicidad. Es autor y orador con experiencia en tecnología, gestión internacional e investigación científica.',
+    'founder.phone': 'Teléfono: (514) 501-1194',
+    'founder.email': 'Correo electrónico: christian@dominiquestrategic.com',
+    'founder.office': 'Oficina: 88 Boul. St. Joseph E., Montreal, QC – H2T 1H1',
+    
     'contact.title': 'Ponte en Contacto',
     'contact.subtitle': '¿Listo para comenzar tu viaje de transformación?',
     'contact.name': 'Nombre Completo',
