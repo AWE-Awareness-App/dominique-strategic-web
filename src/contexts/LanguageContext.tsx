@@ -40,6 +40,7 @@ const translations = {
     'services.couples.description': 'Strengthen your relationship and enhance intimacy through guided coaching for couples.',
     'services.organization.title': 'Organizational Growth',
     'services.organization.description': 'Scale your business with strategic coaching focused on sustainable growth and team development.',
+    'services.subtitle': 'Personalized coaching tailored to your unique goals and challenges',
     
     // Blog
     'blog.title': 'Latest Insights',
@@ -63,6 +64,32 @@ const translations = {
     'contact.message': 'Message',
     'contact.send': 'Send Message',
     'contact.scheduleCall': 'Schedule a Free Consultation',
+    
+    // Testimonials Section
+    'testimonials.title': 'What Clients Say',
+    'testimonials.subtitle': 'Real stories from people whose lives have been transformed',
+    'testimonials.1.quote': "Christian has been a mentor, judge, and trainer. His fluency in four languages and consultant experience have been strong assets helping across the world in business creation.",
+    'testimonials.1.author': 'Prof Mai Thai',
+    'testimonials.1.role': 'HEC Montreal',
+    'testimonials.2.quote': "Always insightful, proactive, able to think outside the box and see the big picture. He understands neurology, technology, innovation, fundraising, business, and healthcare systems internationally.",
+    'testimonials.2.author': 'Nicolás Jiménez',
+    'testimonials.2.role': 'CEO',
+    'testimonials.3.quote': "Christian allowed me to be substantially happier in my daily life. My family and friends noticed and benefited.",
+    'testimonials.3.author': 'Silvia A.',
+    'testimonials.3.role': 'MEng',
+    'testimonials.4.quote': "Your output was critical in ensuring our design agency quickly understood the company, product, and goal. Thank you again for all your help.",
+    'testimonials.4.author': 'Matthew Jafarian',
+    'testimonials.4.role': 'EVP, Business Strategy',
+    'testimonials.5.quote': "Christian is vastly aware, comfortable with complex and new ideas, quickly absorbs and consolidates knowledge, and synthesizes key actionable findings.",
+    'testimonials.5.author': 'Julian Varas, MD',
+    'testimonials.5.role': 'CEO',
+    'testimonials.6.quote': "Thanks for the great work on the report and presentation, it was very useful for our business.",
+    'testimonials.6.author': 'Limor E.',
+    'testimonials.6.role': 'LLB, MBA - Venture Capital Executive',
+    
+    // Logos Section
+    'logos.title': 'Trusted By Leading Organizations',
+    'logos.subtitle': 'Speaking engagements, consulting partnerships, and transformational work',
     
     // Footer
     'footer.tagline': 'Empowering growth through personalized coaching',
@@ -92,6 +119,7 @@ const translations = {
     'services.couples.description': 'Renforcez votre relation et améliorez l\'intimité grâce au coaching guidé pour couples.',
     'services.organization.title': 'Croissance Organisationnelle',
     'services.organization.description': 'Développez votre entreprise avec un coaching stratégique axé sur la croissance durable et le développement d\'équipe.',
+    'services.subtitle': 'Coaching personnalisé adapté à vos objectifs et défis uniques',
     
     // Blog
     'blog.title': 'Dernières Perspectives',
@@ -115,6 +143,32 @@ const translations = {
     'contact.message': 'Message',
     'contact.send': 'Envoyer le Message',
     'contact.scheduleCall': 'Planifier une Consultation Gratuite',
+    
+    // Testimonials Section - French
+    'testimonials.title': 'Ce que disent nos clients',
+    'testimonials.subtitle': 'Témoignages de personnes dont la vie a été transformée',
+    'testimonials.1.quote': "Christian a été un mentor, un juge et un formateur. Sa maîtrise de quatre langues et son expérience en tant que consultant ont été des atouts majeurs pour aider à la création d'entreprises dans le monde entier.",
+    'testimonials.1.author': 'Prof Mai Thai',
+    'testimonials.1.role': 'HEC Montréal',
+    'testimonials.2.quote': "Toujours perspicace, proactif, capable de penser différemment et de voir la situation dans son ensemble. Il comprend la neurologie, la technologie, l'innovation, le financement, les affaires et les systèmes de santé à l'échelle internationale.",
+    'testimonials.2.author': 'Nicolás Jiménez',
+    'testimonials.2.role': 'PDG',
+    'testimonials.3.quote': "Christian m'a permis d'être considérablement plus heureuse dans ma vie quotidienne. Ma famille et mes amis l'ont remarqué et en ont bénéficié.",
+    'testimonials.3.author': 'Silvia A.',
+    'testimonials.3.role': 'MEng',
+    'testimonials.4.quote': "Votre contribution a été essentielle pour que notre agence de design comprenne rapidement l'entreprise, le produit et l'objectif. Merci encore pour toute votre aide.",
+    'testimonials.4.author': 'Matthew Jafarian',
+    'testimonials.4.role': 'Vice-président exécutif, Stratégie d\'entreprise',
+    'testimonials.5.quote': "Christian est extrêmement conscient, à l'aise avec les idées complexes et nouvelles, absorbe et consolide rapidement les connaissances, et synthétise des résultats exploitables clés.",
+    'testimonials.5.author': 'Julian Varas, MD',
+    'testimonials.5.role': 'PDG',
+    'testimonials.6.quote': "Merci pour l'excellent travail sur le rapport et la présentation, cela a été très utile pour notre entreprise.",
+    'testimonials.6.author': 'Limor E.',
+    'testimonials.6.role': 'LLB, MBA - Cadre en capital-risque',
+    
+    // Logos Section - French
+    'logos.title': 'Approuvé par des organisations de premier plan',
+    'logos.subtitle': 'Conférences, partenariats de conseil et travail transformationnel',
     
     // Footer
     'footer.tagline': 'Favoriser la croissance grâce au coaching personnalisé',
@@ -144,6 +198,7 @@ const translations = {
     'services.couples.description': 'Fortalece tu relación y mejora la intimidad a través del coaching guiado para parejas.',
     'services.organization.title': 'Crecimiento Organizacional',
     'services.organization.description': 'Escala tu negocio con coaching estratégico enfocado en crecimiento sostenible y desarrollo de equipos.',
+    'services.subtitle': 'Coaching personalizado adaptado a tus metas y desafíos únicos',
     
     // Blog
     'blog.title': 'Últimas Perspectivas',
@@ -167,6 +222,32 @@ const translations = {
     'contact.message': 'Mensaje',
     'contact.send': 'Enviar Mensaje',
     'contact.scheduleCall': 'Programar una Consulta Gratuita',
+    
+    // Testimonials Section - Spanish
+    'testimonials.title': 'Lo que dicen nuestros clientes',
+    'testimonials.subtitle': 'Historias reales de personas cuyas vidas han sido transformadas',
+    'testimonials.1.quote': "Christian ha sido mentor, juez y formador. Su dominio de cuatro idiomas y su experiencia como consultor han sido activos importantes para ayudar en la creación de negocios en todo el mundo.",
+    'testimonials.1.author': 'Prof Mai Thai',
+    'testimonials.1.role': 'HEC Montreal',
+    'testimonials.2.quote': "Siempre perspicaz, proactivo, capaz de pensar fuera de la caja y ver el panorama general. Comprende la neurología, la tecnología, la innovación, la recaudación de fondos, los negocios y los sistemas de salud a nivel internacional.",
+    'testimonials.2.author': 'Nicolás Jiménez',
+    'testimonials.2.role': 'CEO',
+    'testimonials.3.quote': "Christian me permitió ser sustancialmente más feliz en mi vida diaria. Mi familia y amigos lo notaron y se beneficiaron.",
+    'testimonials.3.author': 'Silvia A.',
+    'testimonials.3.role': 'MEng',
+    'testimonials.4.quote': "Tu aporte fue fundamental para que nuestra agencia de diseño comprendiera rápidamente la empresa, el producto y el objetivo. Nuevamente, gracias por toda tu ayuda.",
+    'testimonials.4.author': 'Matthew Jafarian',
+    'testimonials.4.role': 'Vicepresidente Ejecutivo, Estrategia Empresarial',
+    'testimonials.5.quote': "Christian es sumamente consciente, se desenvuelve bien con ideas complejas y nuevas, absorbe y consolida rápidamente el conocimiento y sintetiza hallazgos clave y accionables.",
+    'testimonials.5.author': 'Julian Varas, MD',
+    'testimonials.5.role': 'CEO',
+    'testimonials.6.quote': "Gracias por el excelente trabajo en el informe y la presentación, fue muy útil para nuestro negocio.",
+    'testimonials.6.author': 'Limor E.',
+    'testimonials.6.role': 'LLB, MBA - Ejecutiva de Capital de Riesgo',
+    
+    // Logos Section - Spanish
+    'logos.title': 'Con la confianza de organizaciones líderes',
+    'logos.subtitle': 'Conferencias, asociaciones de consultoría y trabajo transformacional',
     
     // Footer
     'footer.tagline': 'Empoderando el crecimiento a través del coaching personalizado',

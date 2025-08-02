@@ -108,7 +108,7 @@ export const Home = () => {
               {t('services.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Personalized coaching tailored to your unique goals and challenges
+              {t('services.subtitle')}
             </p>
           </div>
 
@@ -159,82 +159,50 @@ export const Home = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              What Clients Say
+              {t('testimonials.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real stories from people whose lives have been transformed
+              {t('testimonials.subtitle')}
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-500 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                  "Dominique's coaching completely transformed my approach to leadership. 
-                  The strategies we developed increased my team's productivity by 40%."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">SJ</span>
+            {[
+              { id: 1, img: 'mai.thai-HEC_wide.png' },
+              { id: 2, img: 'NicolasJimenez_wide.jpg' },
+              { id: 3, img: 'Silvia.jpg' },
+              { id: 4, img: 'MatthewJafarian_wide2.jpg' },
+              { id: 5, img: 'JulianVaras_720_520.jpg' },
+              { id: 6, img: 'Limor.jpg' }
+            ].map(({ id, img }) => (
+              <Card key={id} className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm h-full">
+                <CardContent className="p-8 h-full flex flex-col">
+                  <div className="flex-1">
+                    <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                      "{t(`testimonials.${id}.quote`)}"
+                    </p>
                   </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Sarah Johnson</p>
-                    <p className="text-sm text-muted-foreground">CEO, TechStart Inc.</p>
+                  <div className="flex items-center gap-3 mt-auto">
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
+                      <img 
+                        src={`/testimonials/${img}`} 
+                        alt={t(`testimonials.${id}.author`)}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNnYtNmgtMnY2SDZ2Mmg2djZoLTIiPjwvc3ZnPg==';
+                          target.className = 'w-full h-full bg-gray-100 p-2';
+                        }}
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-medium truncate">{t(`testimonials.${id}.author`)}</p>
+                      <p className="text-sm text-muted-foreground truncate">{t(`testimonials.${id}.role`)}</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-500 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                  "Working with Dominique saved our marriage. The communication tools and 
-                  intimacy coaching created a deeper connection than we ever thought possible."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">M&A</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Mike & Anna Chen</p>
-                    <p className="text-sm text-muted-foreground">Married 12 years</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-500 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                  "I was struggling with burnout and unhappiness. Dominique's happiness 
-                  coaching gave me tools to find joy and purpose again. Life-changing!"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">DR</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">David Rodriguez</p>
-                    <p className="text-sm text-muted-foreground">Software Engineer</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -244,44 +212,39 @@ export const Home = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Trusted By Leading Organizations
+              {t('logos.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Speaking engagements, consulting partnerships, and transformational work
+              {t('logos.subtitle')}
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto items-center">
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">GOOGLE</div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-center">
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/601Analytics.jpg" alt="601 Analytics" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">MICROSOFT</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/Carebook.jpg" alt="Carebook" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">APPLE</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/Cura_2.jpg" alt="Cura" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">TESLA</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/HAPLY-1.jpg" alt="HAPLY" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">NETFLIX</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/HEC_bigger-1.jpg" alt="HEC" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">STANFORD</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/KineSixVR.jpg" alt="KineSix VR" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">MIT</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/McGill-1.jpg" alt="McGill University" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">HARVARD</div>
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/miami-heat8168.jpg" alt="Miami Heat" className="max-h-16 max-w-full object-contain" />
             </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">TEDx</div>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors">
-              <div className="text-2xl font-bold text-muted-foreground">Y COMBINATOR</div>
-            </div>
+
           </div>
         </div>
       </section>
