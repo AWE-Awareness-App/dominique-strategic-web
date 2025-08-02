@@ -4,16 +4,32 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight, Heart, Users, Brain, TrendingUp } from 'lucide-react';
 
-const BlogCard = ({ title, excerpt, date, readTime, category, image }: {
+const BlogCard = ({ 
+  title, 
+  excerpt, 
+  date, 
+  readTime, 
+  category, 
+  image,
+  slug,
+  t
+}: {
   title: string;
   excerpt: string;
   date: string;
   readTime: string;
   category: string;
   image: string;
+  slug: string;
+  t: (key: string) => string;
 }) => (
-  <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-    <div className="relative h-48 bg-gradient-warm">
+  <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+    <div className="relative h-48">
+      <img 
+        src={image} 
+        alt={title} 
+        className="w-full h-full object-cover"
+      />
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute top-4 left-4">
         <Badge variant="secondary" className="bg-white/90 text-foreground">
@@ -25,89 +41,92 @@ const BlogCard = ({ title, excerpt, date, readTime, category, image }: {
       <CardTitle className="text-xl group-hover:text-primary transition-colors">
         {title}
       </CardTitle>
-      <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-        <div className="flex items-center space-x-1">
-          <Calendar className="h-4 w-4" />
-          <span>{date}</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <Clock className="h-4 w-4" />
-          <span>{readTime}</span>
-        </div>
-      </div>
     </CardHeader>
     <CardContent>
       <CardDescription className="mb-4 leading-relaxed">
         {excerpt}
       </CardDescription>
-      <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
-        Read More
-        <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+      <Button 
+        asChild 
+        variant="ghost" 
+        className="p-0 h-auto text-primary hover:text-primary/80"
+      >
+        <a href={`/blog/${slug}`} className="flex items-center">
+          {t('blog.readMore')}
+          <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+        </a>
       </Button>
     </CardContent>
   </Card>
 );
 
-export const Blog = () => {
+export default function Blog() {
   const { t } = useLanguage();
 
+  // Blog posts data
   const blogPosts = [
     {
-      title: "5 Daily Practices for Lasting Happiness",
-      excerpt: "Discover simple yet powerful practices that can transform your daily experience and build lasting joy from within.",
-      date: "Dec 15, 2024",
-      readTime: "5 min read",
-      category: "Happiness",
-      image: "/api/placeholder/400/200"
+      title: "DSC Digital Health Trends: From Precision, Preventive to Predictive Medicine (3Ps)",
+      excerpt: "Exploring the evolution of digital health and its impact on precision, preventive, and predictive medicine.",
+      date: "August 2, 2024",
+      readTime: "8 min",
+      category: "Digital Health",
+      image: "/images/blog/digital-health-trends.jpg",
+      slug: "digital-health-trends-3ps"
     },
     {
-      title: "Balancing Technology and Mental Health",
-      excerpt: "Learn how to create healthy boundaries with technology while leveraging digital tools for better mental wellness.",
-      date: "Dec 12, 2024",
-      readTime: "7 min read",
-      category: "Health & Tech",
-      image: "/api/placeholder/400/200"
-    },
-    {
-      title: "Building Deeper Intimacy in Relationships",
-      excerpt: "Explore proven strategies for enhancing emotional and physical intimacy with your partner through mindful communication.",
-      date: "Dec 10, 2024",
-      readTime: "6 min read",
-      category: "Relationships",
-      image: "/api/placeholder/400/200"
-    },
-    {
-      title: "Leading with Compassion: Organizational Growth",
-      excerpt: "How compassionate leadership drives sustainable growth and creates thriving workplace cultures.",
-      date: "Dec 8, 2024",
-      readTime: "8 min read",
-      category: "Leadership",
-      image: "/api/placeholder/400/200"
-    },
-    {
-      title: "The Science of Kindness and Well-being",
-      excerpt: "Discover the research-backed benefits of practicing kindness and how it transforms both giver and receiver.",
-      date: "Dec 5, 2024",
-      readTime: "4 min read",
+      title: "The Science of Happiness: A Practical Guide",
+      excerpt: "Discover evidence-based strategies to increase your happiness and well-being in everyday life.",
+      date: "May 15, 2023",
+      readTime: "5 min",
       category: "Wellness",
-      image: "/api/placeholder/400/200"
+      image: "/images/blog/happiness.jpg",
+      slug: "science-of-happiness"
     },
     {
-      title: "Digital Detox: Reclaiming Your Attention",
-      excerpt: "Practical strategies for reducing digital overwhelm and creating space for what truly matters in your life.",
-      date: "Dec 1, 2024",
-      readTime: "6 min read",
-      category: "Health & Tech",
-      image: "/api/placeholder/400/200"
+      title: "Building Stronger Relationships Through Active Listening",
+      excerpt: "Learn how active listening can transform your personal and professional relationships.",
+      date: "April 28, 2023",
+      readTime: "7 min",
+      category: "Relationships",
+      image: "/images/blog/relationships.jpg",
+      slug: "active-listening-relationships"
+    },
+    {
+      title: "The Power of Mindfulness in a Digital Age",
+      excerpt: "How mindfulness practices can help you navigate the challenges of our always-connected world.",
+      date: "April 10, 2023",
+      readTime: "6 min",
+      category: "Mindfulness",
+      image: "/images/blog/mindfulness.jpg",
+      slug: "mindfulness-digital-age"
+    },
+    {
+      title: "Nutrition for Mental Health: What the Research Says",
+      excerpt: "Exploring the connection between diet and mental well-being, and foods that support brain health.",
+      date: "March 22, 2023",
+      readTime: "8 min",
+      category: "Nutrition",
+      image: "/images/blog/nutrition.jpg",
+      slug: "nutrition-mental-health"
+    },
+    {
+      title: "The Art of Work-Life Balance in 2023",
+      excerpt: "Practical tips for maintaining balance and avoiding burnout in today's fast-paced world.",
+      date: "March 5, 2023",
+      readTime: "6 min",
+      category: "Work-Life",
+      image: "/images/blog/worklife.jpg",
+      slug: "work-life-balance-2023"
     }
   ];
 
   const categories = [
-    { name: "All", icon: null },
-    { name: "Happiness", icon: Heart },
-    { name: "Health & Tech", icon: Brain },
-    { name: "Relationships", icon: Users },
-    { name: "Leadership", icon: TrendingUp },
+    { name: 'all', icon: null },
+    { name: 'happiness', icon: Heart },
+    { name: 'health&tech', icon: Brain },
+    { name: 'relationships', icon: Users },
+    { name: 'leadership', icon: TrendingUp },
   ];
 
   return (
@@ -137,7 +156,7 @@ export const Blog = () => {
                 className={index === 0 ? "bg-gradient-hero" : ""}
               >
                 {category.icon && <category.icon className="h-4 w-4 mr-2" />}
-                {category.name}
+                {t(`blog.categories.${category.name}`)}
               </Button>
             ))}
           </div>
@@ -149,14 +168,24 @@ export const Blog = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <BlogCard key={index} {...post} />
+              <BlogCard
+                key={index}
+                title={post.title}
+                excerpt={post.excerpt}
+                date={post.date}
+                readTime={post.readTime}
+                category={post.category}
+                image={post.image}
+                slug={post.slug}
+                t={t}
+              />
             ))}
           </div>
 
           {/* Load More */}
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" className="px-8">
-              Load More Articles
+              {t('blog.loadMore')}
               <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </div>

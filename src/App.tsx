@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Home } from "./pages/Home";
-import { Blog } from "./pages/Blog";
+import Blog from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
