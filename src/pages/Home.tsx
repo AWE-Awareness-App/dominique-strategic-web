@@ -167,30 +167,28 @@ export const Home = () => {
               { id: 5, img: 'JulianVaras_720_520.jpg' },
               { id: 6, img: 'Limor.jpg' }
             ].map(({ id, img }) => (
-              <Card key={id} className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm h-full">
-                <CardContent className="p-8 h-full flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground mb-6 italic leading-relaxed">
+              <Card key={id} className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-background/80 backdrop-blur-sm h-full flex flex-col">
+                <div className="w-full h-96 overflow-hidden rounded-t-lg">
+                  <img 
+                    src={`/testimonials/${img}`} 
+                    alt={t(`testimonials.${id}.author`)}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNnYtNmgtMnY2SDZ2Mmg2djZoLTIiPjwvc3ZnPg==';
+                      target.className = 'w-full h-full bg-gray-100 p-10';
+                    }}
+                  />
+                </div>
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <div className="flex-1 mb-4">
+                    <p className="text-muted-foreground italic leading-relaxed">
                       "{t(`testimonials.${id}.quote`)}"
                     </p>
                   </div>
-                  <div className="flex items-center gap-3 mt-auto">
-                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
-                      <img 
-                        src={`/testimonials/${img}`} 
-                        alt={t(`testimonials.${id}.author`)}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNnYtNmgtMnY2SDZ2Mmg2djZoLTIiPjwvc3ZnPg==';
-                          target.className = 'w-full h-full bg-gray-100 p-2';
-                        }}
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="font-medium truncate">{t(`testimonials.${id}.author`)}</p>
-                      <p className="text-sm text-muted-foreground truncate">{t(`testimonials.${id}.role`)}</p>
-                    </div>
+                  <div className="mt-auto pt-4 border-t border-border/50">
+                    <p className="font-medium">{t(`testimonials.${id}.author`)}</p>
+                    <p className="text-sm text-muted-foreground">{t(`testimonials.${id}.role`)}</p>
                   </div>
                 </CardContent>
               </Card>
