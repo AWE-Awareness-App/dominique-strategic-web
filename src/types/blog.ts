@@ -1,13 +1,16 @@
-export interface BlogPost {
-  slug: string;
-  content: string;
+export interface BlogPostTranslation {
   title: string;
-  date: string;
   excerpt: string;
-  coverImage: string;
-  tags?: string[];
-  readingTime?: {
-    minutes: number;
+  category: string;
+  content: string;
+}
+
+export interface BlogPostData {
+  slug: string;
+  date: string;
+  readTime: string;
+  image: string;
+  translations: {
+    [lang: string]: BlogPostTranslation;
   };
-  [key: string]: any; // For any additional frontmatter
 }

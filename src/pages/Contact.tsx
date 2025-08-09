@@ -120,19 +120,15 @@ export const Contact = () => {
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span>contact@coachinghub.com</span>
+                    <a href="mailto:info@dominiquestrategic.com">info@dominiquestrategic.com</a>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>+1 (555) 123-4567</span>
+                    <a href="tel:+15145011194">(514) 501-1194</a>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>Global Online Coaching</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-muted-foreground">
-                    <Clock className="h-5 w-5 text-primary" />
-                    <span>Available 7 days a week</span>
+                    <a href="https://www.google.com/maps/place/88+Boulevard+St+Joseph+E,+Montreal,+Quebec,+H2T+1H1/@45.502166,-73.568566,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91b41b4b4b4b4:0x4b4b4b4b4b4b4b4b!8m2!3d45.502166!4d-73.566366">88 Boul. St. Joseph E., Montreal, Quebec - H2T 1H1</a>
                   </div>
                 </CardContent>
               </Card>
@@ -152,7 +148,7 @@ export const Contact = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-gradient-hero shadow-soft"
-                    onClick={() => window.open('https://calendly.com/your-free-consultation', '_blank')}
+                    onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
                   >
                     <Calendar className="h-5 w-5 mr-2" />
                     Schedule Now

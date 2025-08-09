@@ -39,25 +39,25 @@ export const Home = () => {
       icon: Heart,
       title: t('services.happiness.title'),
       description: t('services.happiness.description'),
-      calendlyLink: 'https://calendly.com/your-happiness-coaching'
+      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
     },
     {
       icon: Brain,
       title: t('services.health.title'),
       description: t('services.health.description'),
-      calendlyLink: 'https://calendly.com/your-health-tech-coaching'
+      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
     },
     {
       icon: Users,
       title: t('services.couples.title'),
       description: t('services.couples.description'),
-      calendlyLink: 'https://calendly.com/your-couples-coaching'
+      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
     },
     {
       icon: TrendingUp,
       title: t('services.organization.title'),
       description: t('services.organization.description'),
-      calendlyLink: 'https://calendly.com/your-organization-coaching'
+      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
     }
   ];
 
@@ -78,7 +78,7 @@ export const Home = () => {
               <Button 
                 size="lg" 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-warm text-lg px-8 py-4"
-                onClick={() => window.open('https://calendly.com/your-main-calendly-link', '_blank')}
+                onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 {t('hero.cta')}
@@ -263,7 +263,7 @@ export const Home = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-warm text-lg px-12 py-4"
-              onClick={() => window.open('https://calendly.com/your-free-consultation', '_blank')}
+              onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
             >
               <Calendar className="h-5 w-5 mr-2" />
               {t('contact.scheduleCall')}

@@ -32,9 +32,9 @@ export const Navbar = () => {
         asChild 
         variant="secondary" 
         className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-        onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
+        onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
       >
-        <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline" target="_blank" rel="noopener noreferrer">
           {t('hero.cta')}
         </a>
       </Button>
