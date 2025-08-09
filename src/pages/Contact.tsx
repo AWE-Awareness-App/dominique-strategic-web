@@ -106,33 +106,33 @@ export const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <Mail className="h-6 w-6 text-primary" />
-                  Send us a Message
+                  {t('contact.formTitle')}
                 </CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  {t('contact.formDescription')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
+                      <Label htmlFor="firstName">{t('contact.firstName')}</Label>
                       <Input
                         id="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
-                        placeholder="John"
+                        placeholder={t('contact.firstNamePlaceholder')}
                         className="border-border focus:ring-primary"
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
+                      <Label htmlFor="lastName">{t('contact.lastName')}</Label>
                       <Input
                         id="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
-                        placeholder="Doe"
+                        placeholder={t('contact.lastNamePlaceholder')}
                         className="border-border focus:ring-primary"
                         required
                       />
@@ -146,7 +146,7 @@ export const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder={t('contact.emailPlaceholder')}
                       className="border-border focus:ring-primary"
                       required
                     />
@@ -158,7 +158,7 @@ export const Contact = () => {
                       id="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="How can we help you?"
+                      placeholder={t('contact.subjectPlaceholder')}
                       className="border-border focus:ring-primary"
                       required
                     />
@@ -170,7 +170,7 @@ export const Contact = () => {
                       id="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us more about what you're looking for..."
+                      placeholder={t('contact.messagePlaceholder')}
                       rows={5}
                       className="border-border focus:ring-primary resize-none"
                       required
@@ -185,12 +185,12 @@ export const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Sending...
+                        {t('contact.sending')}
                       </>
                     ) : isSuccess ? (
                       <>
                         <CheckCircle className="mr-2 h-4 w-4" />
-                        Message Sent!
+                        {t('contact.messageSent')}
                       </>
                     ) : (
                       t('contact.sendMessage')
@@ -208,7 +208,7 @@ export const Contact = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <Phone className="h-6 w-6 text-primary" />
-                    Quick Contact
+                    {t('contact.quickContact')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -235,7 +235,7 @@ export const Contact = () => {
                     {t('contact.scheduleCall')}
                   </CardTitle>
                   <CardDescription>
-                    Book a 30-minute free consultation to discuss your goals and how we can help you achieve them.
+                    {t('contact.scheduleCallDescription')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -245,10 +245,10 @@ export const Contact = () => {
                     onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
                   >
                     <Calendar className="h-5 w-5 mr-2" />
-                    Schedule Now
+                    {t('contact.scheduleCallButton')}
                   </Button>
                   <p className="text-sm text-muted-foreground mt-3 text-center">
-                    No commitment required • 100% confidential
+                    {t('contact.scheduleCallNote')}
                   </p>
                 </CardContent>
               </Card>
@@ -258,7 +258,7 @@ export const Contact = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <Heart className="h-6 w-6 text-primary" />
-                    Our Specialties
+                    {t('contact.serviceAreas')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

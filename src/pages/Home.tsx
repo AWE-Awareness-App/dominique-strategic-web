@@ -245,10 +245,10 @@ export const Home = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Life?
+              {t('cta.title')}
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Take the first step towards a more fulfilling life. Book your free consultation today.
+              {t('cta.subtitle')}
             </p>
             <Button 
               size="lg" 

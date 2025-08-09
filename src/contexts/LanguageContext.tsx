@@ -88,7 +88,24 @@ const translations = {
     'contact.subject': 'Subject',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
+    'contact.sendMessage': 'Send Message',
+    'contact.sending': 'Sending...',
+    'contact.messageSent': 'Message Sent!',
     'contact.scheduleCall': 'Schedule a Free Consultation',
+    'contact.formTitle': 'Send us a Message',
+    'contact.formDescription': 'Fill out the form below and we\'ll get back to you within 24 hours.',
+    'contact.firstName': 'First Name',
+    'contact.firstNamePlaceholder': 'John',
+    'contact.lastName': 'Last Name',
+    'contact.lastNamePlaceholder': 'Doe',
+    'contact.emailPlaceholder': 'john@example.com',
+    'contact.subjectPlaceholder': 'How can we help you?',
+    'contact.messagePlaceholder': 'Tell us more about what you\'re looking for...',
+    'contact.quickContact': 'Quick Contact',
+    'contact.scheduleCallDescription': 'Book a 30-minute free consultation to discuss your goals and how we can help you achieve them.',
+    'contact.scheduleCallButton': 'Schedule Now',
+    'contact.scheduleCallNote': 'No commitment required • 100% confidential',
+    'contact.serviceAreas': 'Our Specialties',
     
     // Testimonials Section
     'testimonials.title': 'What Clients Say',
@@ -122,6 +139,10 @@ const translations = {
     'footer.contact': 'Contact',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    
+    // CTA Section
+    'cta.title': 'Ready to Transform Your Life?',
+    'cta.subtitle': 'Take the first step towards a more fulfilling life. Book your free consultation today.',
   },
   fr: {
     // Navigation
@@ -192,11 +213,32 @@ const translations = {
     'contact.subject': 'Sujet',
     'contact.message': 'Message',
     'contact.send': 'Envoyer le Message',
+    'contact.sendMessage': 'Envoyer le Message',
+    'contact.sending': 'Envoi en cours...',
+    'contact.messageSent': 'Message Envoyé !',
     'contact.scheduleCall': 'Planifier une Consultation Gratuite',
+    'contact.formTitle': 'Envoyez-nous un Message',
+    'contact.formDescription': 'Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.',
+    'contact.firstName': 'Prénom',
+    'contact.firstNamePlaceholder': 'Jean',
+    'contact.lastName': 'Nom de famille',
+    'contact.lastNamePlaceholder': 'Dupont',
+    'contact.emailPlaceholder': 'jean@exemple.com',
+    'contact.subjectPlaceholder': 'Comment pouvons-nous vous aider ?',
+    'contact.messagePlaceholder': 'Dites-nous plus sur ce que vous recherchez...',
+    'contact.quickContact': 'Contact Rapide',
+    'contact.scheduleCallDescription': 'Réservez une consultation gratuite de 30 minutes pour discuter de vos objectifs et de la façon dont nous pouvons vous aider à les atteindre.',
+    'contact.scheduleCallButton': 'Planifier Maintenant',
+    'contact.scheduleCallNote': 'Sans engagement • 100% confidentiel',
+    'contact.serviceAreas': 'Nos Spécialités',
     
     // Testimonials Section - French
     'testimonials.title': 'Ce que disent nos clients',
     'testimonials.subtitle': 'Témoignages de personnes dont la vie a été transformée',
+    // CTA Section - French
+    'cta.title': 'Prêt à Transformer Votre Vie ?',
+    'cta.subtitle': 'Faites le premier pas vers une vie plus épanouissante. Réservez votre consultation gratuite dès aujourd\'hui.',
+    
     'testimonials.1.quote': "Christian a été un mentor, un juge et un formateur. Sa maîtrise de quatre langues et son expérience en tant que consultant ont été des atouts majeurs pour aider à la création d'entreprises dans le monde entier.",
     'testimonials.1.author': 'Prof Mai Thai',
     'testimonials.1.role': 'HEC Montréal',
@@ -233,6 +275,33 @@ const translations = {
     'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
     
+    // Contact Form
+    'contact.title': 'Contáctenos',
+    'contact.subtitle': '¿Listo para comenzar su viaje de transformación?',
+    'contact.name': 'Nombre Completo',
+    'contact.email': 'Correo Electrónico',
+    'contact.subject': 'Asunto',
+    'contact.message': 'Mensaje',
+    'contact.send': 'Enviar Mensaje',
+    'contact.sendMessage': 'Enviar Mensaje',
+    'contact.sending': 'Enviando...',
+    'contact.messageSent': '¡Mensaje Enviado!',
+    'contact.scheduleCall': 'Programar una Consulta Gratuita',
+    'contact.formTitle': 'Envíenos un Mensaje',
+    'contact.formDescription': 'Complete el formulario a continuación y nos pondremos en contacto con usted dentro de las 24 horas.',
+    'contact.firstName': 'Nombre',
+    'contact.firstNamePlaceholder': 'Juan',
+    'contact.lastName': 'Apellido',
+    'contact.lastNamePlaceholder': 'Pérez',
+    'contact.emailPlaceholder': 'juan@ejemplo.com',
+    'contact.subjectPlaceholder': '¿Cómo podemos ayudarle?',
+    'contact.messagePlaceholder': 'Cuéntenos más sobre lo que está buscando...',
+    'contact.quickContact': 'Contacto Rápido',
+    'contact.scheduleCallDescription': 'Reserve una consulta gratuita de 30 minutos para discutir sus objetivos y cómo podemos ayudarle a alcanzarlos.',
+    'contact.scheduleCallButton': 'Programar Ahora',
+    'contact.scheduleCallNote': 'Sin compromiso • 100% confidencial',
+    'contact.serviceAreas': 'Nuestras Especialidades',
+    
     // Hero Section
     'hero.title': 'Transforma Tu Vida a Través del Coaching Personalizado',
     'hero.subtitle': 'Orientación experta para la felicidad, relaciones, salud y crecimiento organizacional',
@@ -257,6 +326,14 @@ const translations = {
     'blog.readMore': 'Leer más',
     'blog.postedOn': 'Publicado el',
     'blog.author': 'Autor',
+    'blog.minRead': 'min de lectura',
+    'blog.actions.back': 'Atrás',
+    'blog.actions.backToBlog': 'Volver al blog',
+    'blog.error.invalidUrl': 'URL no válida',
+    'blog.error.noPostSpecified': 'No se especificó ninguna publicación en la URL',
+    'blog.error.postNotFound': 'Publicación no encontrada',
+    'blog.error.postNotFoundDescription': 'No se pudo encontrar la publicación solicitada.',
+    'blog.error.translationNotFound': 'Traducción no disponible',
     'blog.readingTime': 'min de lectura',
     'blog.tags': 'Etiquetas',
     'blog.backToBlog': 'Volver al blog',
@@ -282,14 +359,7 @@ const translations = {
     'founder.email': 'Correo electrónico: christian@dominiquestrategic.com',
     'founder.office': 'Oficina: 88 Boul. St. Joseph E., Montreal, QC – H2T 1H1',
     
-    'contact.title': 'Ponte en Contacto',
-    'contact.subtitle': '¿Listo para comenzar tu viaje de transformación?',
-    'contact.name': 'Nombre Completo',
-    'contact.email': 'Dirección de Email',
-    'contact.subject': 'Asunto',
-    'contact.message': 'Mensaje',
-    'contact.send': 'Enviar Mensaje',
-    'contact.scheduleCall': 'Programar una Consulta Gratuita',
+    // Contact Section - Spanish translations are already defined above (lines 278-303)
     
     // Testimonials Section - Spanish
     'testimonials.title': 'Lo que dicen nuestros clientes',
@@ -323,6 +393,10 @@ const translations = {
     'footer.contact': 'Contacto',
     'footer.privacy': 'Política de Privacidad',
     'footer.terms': 'Términos de Servicio',
+    
+    // CTA Section - Spanish
+    'cta.title': '¿Listo para Transformar tu Vida?',
+    'cta.subtitle': 'Da el primer paso hacia una vida más plena. Reserva tu consulta gratuita hoy mismo.',
   },
 };
 
