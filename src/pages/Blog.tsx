@@ -2,7 +2,12 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, ArrowRight, Heart, Users, Brain, TrendingUp } from 'lucide-react';
+import { ArrowRight, Heart, Users, Brain, TrendingUp, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { format, parseISO } from 'date-fns';
+import { staticBlogPosts } from '@/content/blog/Blogs';
+import { BlogPostData } from '@/content/blog/Blogs';
+import { useNavigate } from 'react-router-dom';
 
 const BlogCard = ({ 
   title, 
@@ -12,17 +17,10 @@ const BlogCard = ({
   category, 
   image,
   slug,
-  t
-}: {
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  category: string;
-  image: string;
-  slug: string;
-  t: (key: string) => string;
-}) => (
+}: BlogPostData) => {
+  const navigate = useNavigate();
+  
+  return (
   <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col">
     <div className="relative h-48">
       <img 
@@ -43,154 +41,97 @@ const BlogCard = ({
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <CardDescription className="mb-4 leading-relaxed">
+      <div className="flex items-center text-sm text-muted-foreground mb-4 space-x-4">
+        <div className="flex items-center">
+          <Calendar className="h-4 w-4 mr-1" />
+          <span>{format(parseISO(date), 'MMM d, yyyy')}</span>
+        </div>
+        <div className="flex items-center">
+          <Clock className="h-4 w-4 mr-1" />
+          <span>{readTime}</span>
+        </div>
+      </div>
+      <CardDescription className="mb-4 leading-relaxed line-clamp-3">
         {excerpt}
       </CardDescription>
       <Button 
-        asChild 
-        variant="ghost" 
-        className="p-0 h-auto text-primary hover:text-primary/80"
+        variant="link" 
+        className="px-0 text-primary group-hover:underline mt-auto"
+        onClick={() => navigate(`/blog/${slug}`)}
       >
-        <a href={`/blog/${slug}`} className="flex items-center">
-          {t('blog.readMore')}
-          <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-        </a>
+        Read more <ArrowRight className="ml-1 h-4 w-4 inline-block group-hover:translate-x-1 transition-transform" />
       </Button>
     </CardContent>
   </Card>
-);
+  );
+};
 
 export default function Blog() {
   const { t } = useLanguage();
+  const { i18n } = useTranslation();
+  const posts = staticBlogPosts;
+  
+  // Log the posts to verify they're loaded correctly
+  console.log('Blog posts:', posts);
 
-  // Blog posts data
-  const blogPosts = [
+  const features = [
     {
-      title: "DSC Digital Health Trends: From Precision, Preventive to Predictive Medicine (3Ps)",
-      excerpt: "Exploring the evolution of digital health and its impact on precision, preventive, and predictive medicine.",
-      date: "August 2, 2024",
-      readTime: "8 min",
-      category: "Digital Health",
-      image: "/images/blog/digital-health-trends.jpg",
-      slug: "digital-health-trends-3ps"
+      title: t('blog.features.mentalWellbeing.title'),
+      description: t('blog.features.mentalWellbeing.description'),
+      icon: <Heart className="h-6 w-6 text-primary" />
     },
     {
-      title: "The Science of Happiness: A Practical Guide",
-      excerpt: "Discover evidence-based strategies to increase your happiness and well-being in everyday life.",
-      date: "May 15, 2023",
-      readTime: "5 min",
-      category: "Wellness",
-      image: "/images/blog/happiness.jpg",
-      slug: "science-of-happiness"
+      title: t('blog.features.teamDynamics.title'),
+      description: t('blog.features.teamDynamics.description'),
+      icon: <Users className="h-6 w-6 text-primary" />
     },
     {
-      title: "Building Stronger Relationships Through Active Listening",
-      excerpt: "Learn how active listening can transform your personal and professional relationships.",
-      date: "April 28, 2023",
-      readTime: "7 min",
-      category: "Relationships",
-      image: "/images/blog/relationships.jpg",
-      slug: "active-listening-relationships"
+      title: t('blog.features.leadership.title'),
+      description: t('blog.features.leadership.description'),
+      icon: <Brain className="h-6 w-6 text-primary" />
     },
     {
-      title: "The Power of Mindfulness in a Digital Age",
-      excerpt: "How mindfulness practices can help you navigate the challenges of our always-connected world.",
-      date: "April 10, 2023",
-      readTime: "6 min",
-      category: "Mindfulness",
-      image: "/images/blog/mindfulness.jpg",
-      slug: "mindfulness-digital-age"
-    },
-    {
-      title: "Nutrition for Mental Health: What the Research Says",
-      excerpt: "Exploring the connection between diet and mental well-being, and foods that support brain health.",
-      date: "March 22, 2023",
-      readTime: "8 min",
-      category: "Nutrition",
-      image: "/images/blog/nutrition.jpg",
-      slug: "nutrition-mental-health"
-    },
-    {
-      title: "The Art of Work-Life Balance in 2023",
-      excerpt: "Practical tips for maintaining balance and avoiding burnout in today's fast-paced world.",
-      date: "March 5, 2023",
-      readTime: "6 min",
-      category: "Work-Life",
-      image: "/images/blog/worklife.jpg",
-      slug: "work-life-balance-2023"
+      title: t('blog.features.innovation.title'),
+      description: t('blog.features.innovation.description'),
+      icon: <TrendingUp className="h-6 w-6 text-primary" />
     }
   ];
 
-  const categories = [
-    { name: 'all', icon: null },
-    { name: 'happiness', icon: Heart },
-    { name: 'health&tech', icon: Brain },
-    { name: 'relationships', icon: Users },
-    { name: 'leadership', icon: TrendingUp },
-  ];
-
   return (
-    <div className="min-h-screen pt-24">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-soft">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              {t('blog.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('blog.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="container py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4">{t('blog.title')}</h1>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          {t('blog.subtitle')}
+        </p>
+      </div>
 
-      {/* Categories */}
-      <section className="py-8 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category, index) => (
-              <Button
-                key={index}
-                variant={index === 0 ? "default" : "outline"}
-                className={index === 0 ? "bg-gradient-hero" : ""}
-              >
-                {category.icon && <category.icon className="h-4 w-4 mr-2" />}
-                {t(`blog.categories.${category.name}`)}
-              </Button>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {features.map((feature, index) => (
+          <div key={index} className="bg-card p-6 rounded-lg border hover:shadow-md transition-shadow">
+            <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              {feature.icon}
+            </div>
+            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+            <p className="text-muted-foreground text-sm">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold mb-8">{t('blog.latestArticles')}</h2>
+        {posts.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">No blog posts found.</p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <BlogCard key={post.slug} {...post} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Blog Posts */}
-      <section className="py-16 bg-gradient-soft">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <BlogCard
-                key={index}
-                title={post.title}
-                excerpt={post.excerpt}
-                date={post.date}
-                readTime={post.readTime}
-                category={post.category}
-                image={post.image}
-                slug={post.slug}
-                t={t}
-              />
-            ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="px-8">
-              {t('blog.loadMore')}
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
+        )}
+      </div>
     </div>
   );
 };
