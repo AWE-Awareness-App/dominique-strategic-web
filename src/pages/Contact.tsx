@@ -1,18 +1,82 @@
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Calendar, Clock, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Clock, Heart, Loader2, CheckCircle } from 'lucide-react';
+import { toast } from 'sonner';
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export const Contact = () => {
   const { t } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+    setIsSubmitting(true);
+    
+    try {
+      // Replace these with your actual EmailJS service ID, template ID, and public key
+      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
+      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
+      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+      
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          to_email: 'info@dominiquestrategic.com',
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          reply_to: formData.email
+        },
+        publicKey
+      );
+      
+      setIsSuccess(true);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      
+      toast.success('Message sent successfully! We\'ll get back to you soon.');
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      toast.error('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,16 +119,22 @@ export const Contact = () => {
                       <Label htmlFor="firstName">First Name</Label>
                       <Input
                         id="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         placeholder="John"
                         className="border-border focus:ring-primary"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name</Label>
                       <Input
                         id="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         placeholder="Doe"
                         className="border-border focus:ring-primary"
+                        required
                       />
                     </div>
                   </div>
@@ -74,8 +144,11 @@ export const Contact = () => {
                     <Input
                       id="email"
                       type="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="john@example.com"
                       className="border-border focus:ring-primary"
+                      required
                     />
                   </div>
                   
@@ -83,8 +156,11 @@ export const Contact = () => {
                     <Label htmlFor="subject">{t('contact.subject')}</Label>
                     <Input
                       id="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       placeholder="How can we help you?"
                       className="border-border focus:ring-primary"
+                      required
                     />
                   </div>
                   
@@ -92,15 +168,33 @@ export const Contact = () => {
                     <Label htmlFor="message">{t('contact.message')}</Label>
                     <Textarea
                       id="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Tell us more about what you're looking for..."
                       rows={5}
                       className="border-border focus:ring-primary resize-none"
+                      required
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-gradient-hero">
-                    <Mail className="h-4 w-4 mr-2" />
-                    {t('contact.send')}
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-gradient-hero hover:opacity-90 transition-opacity relative"
+                    disabled={isSubmitting || isSuccess}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : isSuccess ? (
+                      <>
+                        <CheckCircle className="mr-2 h-4 w-4" />
+                        Message Sent!
+                      </>
+                    ) : (
+                      t('contact.sendMessage')
+                    )}
                   </Button>
                 </form>
               </CardContent>

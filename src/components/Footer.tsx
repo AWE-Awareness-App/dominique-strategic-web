@@ -12,8 +12,7 @@ export const Footer = () => {
           {/* Logo & Tagline */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Heart className="h-8 w-8 text-secondary" />
-              <span className="text-2xl font-bold">CoachingHub</span>
+              <img src="/logo-white.png" alt="Dominique Strategic" className="h-12" />
             </Link>
             <p className="text-white/80 max-w-md">
               {t('footer.tagline')}
@@ -21,15 +20,15 @@ export const Footer = () => {
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-2 text-white/80">
                 <Mail className="h-4 w-4" />
-                <span>contact@coachinghub.com</span>
+                <a href="mailto:info@dominiquestrategic.com" className="hover:text-secondary transition-colors">info@dominiquestrategic.com</a>
               </div>
               <div className="flex items-center space-x-2 text-white/80">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+15145011194" className="hover:text-secondary transition-colors">(514) 501-1194</a>
               </div>
               <div className="flex items-center space-x-2 text-white/80">
                 <MapPin className="h-4 w-4" />
-                <span>Global Online Coaching</span>
+                <a href="https://www.google.com/maps/place/88+Boulevard+St+Joseph+E,+Montreal,+Quebec,+H2T+1H1" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">88 Boul. St. Joseph E., Montreal, QC - H2T 1H1</a>
               </div>
             </div>
           </div>
@@ -87,7 +86,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © 2024 CoachingHub. All rights reserved.
+            © 2024 Dominique Strategic. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <span className="text-white/60 hover:text-secondary text-sm cursor-pointer transition-colors">
