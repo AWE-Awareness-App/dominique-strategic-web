@@ -31,16 +31,18 @@ const translations = {
     'hero.cta': 'Book a Session',
     
     // Services
-    'services.title': 'Our Coaching Services',
+    'services.title': 'Our Services',
+    'services.subtitle': 'Personalized solutions tailored to your unique goals and challenges',
     'services.happiness.title': 'Happiness & Kindness',
     'services.happiness.description': 'Discover inner peace, cultivate kindness, and build lasting happiness through personalized coaching sessions.',
     'services.health.title': 'Health & Technology',
-    'services.health.description': 'Balance your digital life with physical wellness. Learn to leverage technology for better health outcomes.',
+    'services.health.description': 'Balance digital life with physical wellbeing. Learn to leverage technology for better health outcomes.',
     'services.couples.title': 'Couples & Intimacy',
-    'services.couples.description': 'Strengthen your relationship and enhance intimacy through guided coaching for couples.',
+    'services.couples.description': 'Strengthen your relationship and enhance intimacy through guided couples coaching.',
     'services.organization.title': 'Organizational Growth',
     'services.organization.description': 'Scale your business with strategic coaching focused on sustainable growth and team development.',
-    'services.subtitle': 'Personalized coaching tailored to your unique goals and challenges',
+    'services.finance.title': 'Corporate Finance Advisory',
+    'services.finance.description': 'Full spectrum corporate finance advice for businesses, from M&A to capital raising and portfolio management.',
     
     // Blog
     'blog.title': 'Latest Insights',
@@ -140,6 +142,16 @@ const translations = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     
+    // Corporate Finance Section
+    'corporateFinance.title': 'Corporate Finance Advisory',
+    'corporateFinance.description1': 'We provide the full spectrum of corporate finance advice to all businesses. This includes advising shareholders, directors and investors who are going through strategic change such as acquiring or selling all or part of a business, raising funds or exploring new business opportunities.',
+    'corporateFinance.description2': 'DSC is a highly specialized firm of corporate finance consultants providing its services. Whether advising individuals, owner-managed businesses, listed companies, or international entities, our goal is to work closely with our clients and help them achieve their ambitions. Our clients include publicly traded and privately held companies, government entities and investment organizations such as private equity firms and hedge funds. Our approach revolves around exceptional client service and the key to our success has been a result of the deep relationships we have built with our clients.',
+    'corporateFinance.approach': 'We view ourselves as your partners, rather than service providers, and are here to support you throughout the business life-cycle – be it Corporate Strategy, M&A, Valuations, Due-diligence, Capital Raising or IPOs.',
+    'portfolioManagement.title': 'Portfolio Management Advisory',
+    'portfolioManagement.description': 'We help clients to optimize their long-term asset allocation, providing support with;',
+    'portfolioManagement.strategicAllocation': 'Strategic asset allocation: DSC supports clients in setting the most suitable long-term strategic asset mix for their specific needs. Leveraging world-leading technology, we assist both investors without explicit liabilities (such as endowments and family offices) and those that require detailed asset-liability balance sheet modelling (pensions, insurers).',
+    'portfolioManagement.portfolioDesign': 'Portfolio Design: The DSC Portfolio Solutions team helps investors to build portfolios that fit their unique circumstances and objectives. Blending quantitative and qualitative portfolio construction with robust implementation planning, dedicated solutions strategists and asset class specialists support each step of the process.',
+    
     // CTA Section
     'cta.title': 'Ready to Transform Your Life?',
     'cta.subtitle': 'Take the first step towards a more fulfilling life. Book your free consultation today.',
@@ -156,16 +168,18 @@ const translations = {
     'hero.cta': 'Réserver une Séance',
     
     // Services
-    'services.title': 'Nos Services de Coaching',
-    'services.happiness.title': 'Bonheur et Bienveillance',
-    'services.happiness.description': 'Découvrez la paix intérieure, cultivez la bienveillance et construisez un bonheur durable grâce à des séances de coaching personnalisées.',
+    'services.title': 'Nos Services',
+    'services.subtitle': 'Solutions personnalisées adaptées à vos objectifs et défis uniques',
+    'services.happiness.title': 'Bonheur et Gentillesse',
+    'services.happiness.description': 'Découvrez la paix intérieure, cultivez la gentillesse et construisez un bonheur durable grâce à des séances de coaching personnalisées.',
     'services.health.title': 'Santé et Technologie',
-    'services.health.description': 'Équilibrez votre vie numérique avec le bien-être physique. Apprenez à utiliser la technologie pour de meilleurs résultats de santé.',
+    'services.health.description': 'Équilibrez la vie numérique avec le bien-être physique. Apprenez à tirer parti de la technologie pour de meilleurs résultats de santé.',
     'services.couples.title': 'Couples et Intimité',
-    'services.couples.description': 'Renforcez votre relation et améliorez l\'intimité grâce au coaching guidé pour couples.',
+    'services.couples.description': 'Renforcez votre relation et améliorez l\'intimité grâce à un coaching de couple guidé.',
     'services.organization.title': 'Croissance Organisationnelle',
-    'services.organization.description': 'Développez votre entreprise avec un coaching stratégique axé sur la croissance durable et le développement d\'équipe.',
-    'services.subtitle': 'Coaching personnalisé adapté à vos objectifs et défis uniques',
+    'services.organization.description': 'Développez votre entreprise avec un coaching stratégique axé sur une croissance durable et le développement d\'équipe.',
+    'services.finance.title': 'Conseil en Finance d\'Entreprise',
+    'services.finance.description': 'Conseil complet en finance d\'entreprise, des fusions et acquisitions à la levée de fonds et à la gestion de portefeuille.',
     
     // Blog
     'blog.title': 'Derniers Articles',
@@ -235,6 +249,16 @@ const translations = {
     // Testimonials Section - French
     'testimonials.title': 'Ce que disent nos clients',
     'testimonials.subtitle': 'Témoignages de personnes dont la vie a été transformée',
+    // Corporate Finance Section - French
+    'corporateFinance.title': 'Conseil en Finance d\'Entreprise',
+    'corporateFinance.description1': 'Nous offrons un éventail complet de conseils en finance d\'entreprise à toutes les entreprises. Cela comprend le conseil aux actionnaires, administrateurs et investisseurs qui traversent des changements stratégiques tels que l\'acquisition ou la vente de tout ou partie d\'une entreprise, la levée de fonds ou l\'exploration de nouvelles opportunités commerciales.',
+    'corporateFinance.description2': 'DSC est un cabinet hautement spécialisé de consultants en finance d\'entreprise. Qu\'il s\'agisse de conseiller des particuliers, des entreprises gérées par leurs propriétaires, des sociétés cotées ou des entités internationales, notre objectif est de travailler en étroite collaboration avec nos clients et de les aider à réaliser leurs ambitions. Nos clients comprennent des sociétés cotées en bourse et privées, des entités gouvernementales et des organisations d\'investissement telles que des sociétés de capital-investissement et des fonds spéculatifs. Notre approche tourne autour d\'un service client exceptionnel et la clé de notre succès a été le résultat des relations profondes que nous avons bâties avec nos clients.',
+    'corporateFinance.approach': 'Nous nous considérons comme vos partenaires, plutôt que comme des prestataires de services, et sommes là pour vous soutenir tout au long du cycle de vie de l\'entreprise - qu\'il s\'agisse de stratégie d\'entreprise, de fusions et acquisitions, d\'évaluations, de due diligence, de levée de capitaux ou d\'introductions en bourse.',
+    'portfolioManagement.title': 'Conseil en Gestion de Portefeuille',
+    'portfolioManagement.description': 'Nous aidons les clients à optimiser leur allocation d\'actifs à long terme, en fournissant un soutien pour :',
+    'portfolioManagement.strategicAllocation': 'Allocation stratégique d\'actifs : DSC aide les clients à définir le mix d\'actifs stratégiques à long terme le plus adapté à leurs besoins spécifiques. En tirant parti d\'une technologie de pointe, nous aidons à la fois les investisseurs sans passif explicite (tels que les fonds de dotation et les family offices) et ceux qui nécessitent une modélisation détaillée du bilan actif-passif (caisses de retraite, assureurs).',
+    'portfolioManagement.portfolioDesign': 'Conception de portefeuille : L\'équipe DSC Portfolio Solutions aide les investisseurs à construire des portefeuilles qui correspondent à leur situation et à leurs objectifs uniques. En associant une construction de portefeuille quantitative et qualitative à une planification de mise en œuvre robuste, des stratèges dédiés et des spécialistes de classe d\'actifs soutiennent chaque étape du processus.',
+    
     // CTA Section - French
     'cta.title': 'Prêt à Transformer Votre Vie ?',
     'cta.subtitle': 'Faites le premier pas vers une vie plus épanouissante. Réservez votre consultation gratuite dès aujourd\'hui.',
@@ -308,7 +332,8 @@ const translations = {
     'hero.cta': 'Reservar una Sesión',
     
     // Services
-    'services.title': 'Nuestros Servicios de Coaching',
+    'services.title': 'Nuestros Servicios',
+    'services.subtitle': 'Soluciones personalizadas adaptadas a tus metas y desafíos únicos',
     'services.happiness.title': 'Felicidad y Bondad',
     'services.happiness.description': 'Descubre la paz interior, cultiva la bondad y construye felicidad duradera a través de sesiones de coaching personalizadas.',
     'services.health.title': 'Salud y Tecnología',
@@ -317,7 +342,8 @@ const translations = {
     'services.couples.description': 'Fortalece tu relación y mejora la intimidad a través del coaching guiado para parejas.',
     'services.organization.title': 'Crecimiento Organizacional',
     'services.organization.description': 'Escala tu negocio con coaching estratégico enfocado en crecimiento sostenible y desarrollo de equipos.',
-    'services.subtitle': 'Coaching personalizado adaptado a tus metas y desafíos únicos',
+    'services.finance.title': 'Asesoría en Finanzas Corporativas',
+    'services.finance.description': 'Asesoramiento integral en finanzas corporativas, desde fusiones y adquisiciones hasta recaudación de capital y gestión de carteras.',
     
     // Blog
     'blog.title': 'Últimas noticias',
@@ -393,6 +419,16 @@ const translations = {
     'footer.contact': 'Contacto',
     'footer.privacy': 'Política de Privacidad',
     'footer.terms': 'Términos de Servicio',
+    
+    // Corporate Finance Section - Spanish
+    'corporateFinance.title': 'Asesoría en Finanzas Corporativas',
+    'corporateFinance.description1': 'Brindamos todo el espectro de asesoramiento en finanzas corporativas a todo tipo de empresas. Esto incluye asesorar a accionistas, directores e inversores que están atravesando cambios estratégicos como la adquisición o venta total o parcial de un negocio, la recaudación de fondos o la exploración de nuevas oportunidades comerciales.',
+    'corporateFinance.description2': 'DSC es una firma altamente especializada de consultores en finanzas corporativas. Ya sea asesorando a particulares, empresas gestionadas por sus propietarios, empresas que cotizan en bolsa o entidades internacionales, nuestro objetivo es trabajar en estrecha colaboración con nuestros clientes y ayudarlos a alcanzar sus ambiciones. Nuestros clientes incluyen empresas que cotizan en bolsa y privadas, entidades gubernamentales y organizaciones de inversión como firmas de capital privado y fondos de cobertura. Nuestro enfoque gira en torno a un servicio al cliente excepcional y la clave de nuestro éxito ha sido el resultado de las relaciones profundas que hemos construido con nuestros clientes.',
+    'corporateFinance.approach': 'Nos vemos como sus socios, en lugar de proveedores de servicios, y estamos aquí para apoyarlo durante todo el ciclo de vida de su negocio, ya sea en Estrategia Corporativa, Fusiones y Adquisiciones, Valoraciones, Due Diligence, Recaudación de Capital u Ofertas Públicas Iniciales (OPI).',
+    'portfolioManagement.title': 'Asesoría en Gestión de Carteras',
+    'portfolioManagement.description': 'Ayudamos a los clientes a optimizar su asignación de activos a largo plazo, brindando apoyo con;',
+    'portfolioManagement.strategicAllocation': 'Asignación estratégica de activos: DSC ayuda a los clientes a establecer la combinación estratégica de activos a largo plazo más adecuada para sus necesidades específicas. Aprovechando tecnología de clase mundial, asistimos tanto a inversores sin pasivos explícitos (como fundaciones y family offices) como a aquellos que requieren un modelado detallado del balance de activos y pasivos (fondos de pensiones, aseguradoras).',
+    'portfolioManagement.portfolioDesign': 'Diseño de cartera: El equipo de Soluciones de Cartera de DSC ayuda a los inversores a construir carteras que se ajusten a sus circunstancias y objetivos únicos. Combinando la construcción de carteras cuantitativas y cualitativas con una planificación de implementación sólida, estrategas de soluciones dedicados y especialistas en clases de activos respaldan cada paso del proceso.',
     
     // CTA Section - Spanish
     'cta.title': '¿Listo para Transformar tu Vida?',

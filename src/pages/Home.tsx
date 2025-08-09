@@ -58,6 +58,12 @@ export const Home = () => {
       title: t('services.organization.title'),
       description: t('services.organization.description'),
       calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+    },
+    {
+      icon: TrendingUp,
+      title: t('services.finance.title'),
+      description: t('services.finance.description'),
+      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
     }
   ];
 
@@ -104,10 +110,12 @@ export const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
+            {/* Add an empty div to maintain grid alignment with 3 columns */}
+            {services.length % 3 === 2 && <div className="hidden lg:block"></div>}
           </div>
         </div>
       </section>
@@ -235,6 +243,44 @@ export const Home = () => {
               <img src="/logos/miami-heat8168.jpg" alt="Miami Heat" className="max-h-16 max-w-full object-contain" />
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Finance Section */}
+      <section className="py-20 bg-background/80">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              {t('corporateFinance.title')}
+            </h2>
+            <div className="prose prose-lg text-muted-foreground mx-auto text-left">
+              <p className="mb-6">{t('corporateFinance.description1')}</p>
+              <p className="mb-6">{t('corporateFinance.description2')}</p>
+              <p className="mb-8 text-foreground/90 italic">{t('corporateFinance.approach')}</p>
+              
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">{t('portfolioManagement.title')}</h3>
+              <p className="mb-6">{t('portfolioManagement.description')}</p>
+              <ul className="space-y-4 mb-6">
+                <li>
+                  <p className="text-muted-foreground">{t('portfolioManagement.strategicAllocation')}</p>
+                </li>
+                <li>
+                  <p className="text-muted-foreground">{t('portfolioManagement.portfolioDesign')}</p>
+                </li>
+              </ul>
+              
+              <div className="mt-10 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white hover:shadow-soft text-lg px-8 py-6"
+                  onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+                >
+                  <Calendar className="h-5 w-5 mr-2" />
+                  {t('contact.scheduleCall')}
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
