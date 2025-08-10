@@ -24,6 +24,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
+    'nav.corporateFinance': 'Corporate Finance',
     
     // Hero Section
     'hero.title': 'Transform Your Life Through Personalized Coaching',
@@ -44,7 +45,28 @@ const translations = {
     'services.finance.title': 'Corporate Finance Advisory',
     'services.finance.description': 'Full spectrum corporate finance advice for businesses, from M&A to capital raising and portfolio management.',
     
+    // Corporate Finance Page
+    'corporateFinance.hero.title': 'Corporate Finance Advisory',
+    'corporateFinance.hero.subtitle': 'Strategic financial solutions to drive your business growth and success',
+    'corporateFinance.overview.title': 'Comprehensive Financial Advisory',
+    'corporateFinance.overview.description1': 'We provide the full spectrum of corporate finance advice to all businesses. This includes advising shareholders, directors, and investors who are going through strategic change such as the acquisition or disposal of all or part of a business, raising funds, or exploring new business opportunities.',
+    'corporateFinance.overview.description2': 'DSC is a highly specialized corporate finance advisory firm. Whether advising individuals, owner-managed businesses, publicly listed companies, or international entities, our aim is to work closely with our clients and help them achieve their ambitions. Our clients include public and private companies, government entities, and investment organizations such as private equity firms and hedge funds.',
+    'corporateFinance.overview.approach': 'We see ourselves as your partners, rather than service providers, and we are here to support you throughout your business lifecycle, whether in Corporate Strategy, Mergers & Acquisitions, Valuations, Due Diligence, Capital Raising, or Initial Public Offerings (IPOs).',
+    'corporateFinance.services.title': 'Our Services',
+    'corporateFinance.services.subtitle': 'Comprehensive financial solutions tailored to your business needs',
+    'corporateFinance.services.mAndA.title': 'Mergers & Acquisitions',
+    'corporateFinance.services.mAndA.description': 'Expert guidance through the entire M&A process, from target identification and valuation to negotiation and integration.',
+    'corporateFinance.services.capitalRaising.title': 'Capital Raising',
+    'corporateFinance.services.capitalRaising.description': 'Strategic advice on raising capital through equity, debt, or hybrid instruments to fund growth and expansion.',
+    'corporateFinance.services.financialModeling.title': 'Financial Modeling',
+    'corporateFinance.services.financialModeling.description': 'Advanced financial modeling to support investment decisions, valuations, and strategic planning.',
+    'corporateFinance.services.strategicAdvisory.title': 'Strategic Advisory',
+    'corporateFinance.services.strategicAdvisory.description': 'Expert advice on corporate strategy, market entry, and business transformation initiatives.',
+    'corporateFinance.cta.title': 'Ready to Transform Your Business?',
+    'corporateFinance.cta.subtitle': 'Schedule a consultation to discuss how we can help you achieve your financial goals.',
+    
     // Blog
+    'blog.latestArticles': 'Latest Blogs',
     'blog.title': 'Latest Insights',
     'blog.subtitle': 'Discover tips, insights, and inspiration for your personal and professional growth',
     'blog.readMore': 'Read More',
@@ -161,6 +183,7 @@ const translations = {
     'nav.home': 'Accueil',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
+    'nav.corporateFinance': 'Finance d\'Entreprise',
     
     // Hero Section
     'hero.title': 'Transformez Votre Vie Grâce au Coaching Personnalisé',
@@ -181,7 +204,28 @@ const translations = {
     'services.finance.title': 'Conseil en Finance d\'Entreprise',
     'services.finance.description': 'Conseil complet en finance d\'entreprise, des fusions et acquisitions à la levée de fonds et à la gestion de portefeuille.',
     
+    // Corporate Finance Page
+    'corporateFinance.hero.title': 'Conseil en Finance d\'Entreprise',
+    'corporateFinance.hero.subtitle': 'Solutions financières stratégiques pour stimuler la croissance et le succès de votre entreprise',
+    'corporateFinance.overview.title': 'Conseil Financier Complet',
+    'corporateFinance.overview.description1': 'Nous offrons un éventail complet de conseils en finance d\'entreprise à tous les types d\'entreprises. Cela inclut le conseil aux actionnaires, administrateurs et investisseurs traversant des changements stratégiques tels que l\'acquisition ou la cession totale ou partielle d\'une entreprise, la levée de fonds ou l\'exploration de nouvelles opportunités commerciales.',
+    'corporateFinance.overview.description2': 'DSC est un cabinet de conseil en finance d\'entreprise hautement spécialisé. Que nous conseillions des particuliers, des entreprises gérées par leurs propriétaires, des sociétés cotées en bourse ou des entités internationales, notre objectif est de travailler en étroite collaboration avec nos clients et de les aider à réaliser leurs ambitions. Nos clients comprennent des sociétés cotées et privées, des entités gouvernementales et des organisations d\'investissement telles que des sociétés de capital-investissement et des fonds spéculatifs.',
+    'corporateFinance.overview.approach': 'Nous nous considérons comme vos partenaires, plutôt que comme de simples prestataires de services, et nous sommes là pour vous soutenir tout au long du cycle de vie de votre entreprise, que ce soit en stratégie d\'entreprise, fusions et acquisitions, évaluations, due diligence, levée de capitaux ou introductions en bourse (IPO).',
+    'corporateFinance.services.title': 'Nos Services',
+    'corporateFinance.services.subtitle': 'Solutions financières complètes adaptées aux besoins de votre entreprise',
+    'corporateFinance.services.mAndA.title': 'Fusions & Acquisitions',
+    'corporateFinance.services.mAndA.description': 'Conseils d\'experts tout au long du processus de fusions et acquisitions, de l\'identification des cibles et de l\'évaluation à la négociation et à l\'intégration.',
+    'corporateFinance.services.capitalRaising.title': 'Levée de Fonds',
+    'corporateFinance.services.capitalRaising.description': 'Conseils stratégiques sur la levée de capitaux par actions, dette ou instruments hybrides pour financer la croissance et l\'expansion.',
+    'corporateFinance.services.financialModeling.title': 'Modélisation Financière',
+    'corporateFinance.services.financialModeling.description': 'Modélisation financière avancée pour soutenir les décisions d\'investissement, les évaluations et la planification stratégique.',
+    'corporateFinance.services.strategicAdvisory.title': 'Conseil Stratégique',
+    'corporateFinance.services.strategicAdvisory.description': 'Conseils d\'experts sur la stratégie d\'entreprise, l\'entrée sur les marchés et les initiatives de transformation des entreprises.',
+    'corporateFinance.cta.title': 'Prêt à Transformer Votre Entreprise ?',
+    'corporateFinance.cta.subtitle': 'Planifiez une consultation pour discuter de la façon dont nous pouvons vous aider à atteindre vos objectifs financiers.',
+    
     // Blog
+    'blog.latestArticles': 'Derniers Articles',
     'blog.title': 'Derniers Articles',
     'blog.subtitle': 'Découvrez des conseils, des idées et de l\'inspiration pour votre développement personnel et professionnel',
     'blog.readMore': 'Lire la suite',
@@ -211,7 +255,6 @@ const translations = {
     'blog.categories.nutrition': 'Nutrition',
     'blog.categories.work-life': 'Vie Professionnelle',
     
-    // Contact
     // Founder Section - French
     'founder.name': 'Christian Dominique, BSc, MBA',
     'founder.title': 'Fondateur et Directeur Général',
@@ -256,8 +299,8 @@ const translations = {
     'corporateFinance.approach': 'Nous nous considérons comme vos partenaires, plutôt que comme des prestataires de services, et sommes là pour vous soutenir tout au long du cycle de vie de l\'entreprise - qu\'il s\'agisse de stratégie d\'entreprise, de fusions et acquisitions, d\'évaluations, de due diligence, de levée de capitaux ou d\'introductions en bourse.',
     'portfolioManagement.title': 'Conseil en Gestion de Portefeuille',
     'portfolioManagement.description': 'Nous aidons les clients à optimiser leur allocation d\'actifs à long terme, en fournissant un soutien pour :',
-    'portfolioManagement.strategicAllocation': 'Allocation stratégique d\'actifs : DSC aide les clients à définir le mix d\'actifs stratégiques à long terme le plus adapté à leurs besoins spécifiques. En tirant parti d\'une technologie de pointe, nous aidons à la fois les investisseurs sans passif explicite (tels que les fonds de dotation et les family offices) et ceux qui nécessitent une modélisation détaillée du bilan actif-passif (caisses de retraite, assureurs).',
-    'portfolioManagement.portfolioDesign': 'Conception de portefeuille : L\'équipe DSC Portfolio Solutions aide les investisseurs à construire des portefeuilles qui correspondent à leur situation et à leurs objectifs uniques. En associant une construction de portefeuille quantitative et qualitative à une planification de mise en œuvre robuste, des stratèges dédiés et des spécialistes de classe d\'actifs soutiennent chaque étape du processus.',
+    'portfolioManagement.strategicAllocation': 'Allocation stratégique d\'actifs : DSC aide les clients à définir le mix d\'actifs stratégiques à long terme le plus adapté à leurs besoins spécifiques. Leveraging world-leading technology, we assist both investors without explicit liabilities (such as endowments and family offices) and those that require detailed asset-liability balance sheet modelling (pensions, insurers).',
+    'portfolioManagement.portfolioDesign': 'Conception de portefeuille : L\'équipe DSC Portfolio Solutions aide les investisseurs à construire des portefeuilles qui correspondent à leur situation et à leurs objectifs uniques. Blending quantitative and qualitative portfolio construction with robust implementation planning, dedicated solutions strategists and asset class specialists support each step of the process.',
     
     // CTA Section - French
     'cta.title': 'Prêt à Transformer Votre Vie ?',
@@ -298,6 +341,7 @@ const translations = {
     'nav.home': 'Inicio',
     'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
+    'nav.corporateFinance': 'Finanzas Corporativas',
     
     // Contact Form
     'contact.title': 'Contáctenos',
@@ -343,7 +387,27 @@ const translations = {
     'services.organization.title': 'Crecimiento Organizacional',
     'services.organization.description': 'Escala tu negocio con coaching estratégico enfocado en crecimiento sostenible y desarrollo de equipos.',
     'services.finance.title': 'Asesoría en Finanzas Corporativas',
-    'services.finance.description': 'Asesoramiento integral en finanzas corporativas, desde fusiones y adquisiciones hasta recaudación de capital y gestión de carteras.',
+    'services.finance.description': 'Asesoramiento integral en finanzas corporativas para empresas, desde fusiones y adquisiciones hasta la recaudación de fondos y gestión de carteras.',
+    
+    // Corporate Finance Page
+    'corporateFinance.hero.title': 'Asesoría en Finanzas Corporativas',
+    'corporateFinance.hero.subtitle': 'Soluciones financieras estratégicas para impulsar el crecimiento y éxito de su negocio',
+    'corporateFinance.overview.title': 'Asesoría Financiera Integral',
+    'corporateFinance.overview.description1': 'Brindamos todo el espectro de asesoramiento en finanzas corporativas a todo tipo de empresas. Esto incluye asesorar a accionistas, directores e inversores que están atravesando cambios estratégicos como la adquisición o venta total o parcial de un negocio, la recaudación de fondos o la exploración de nuevas oportunidades comerciales.',
+    'corporateFinance.overview.description2': 'DSC es una firma altamente especializada de consultores en finanzas corporativas. Ya sea asesorando a particulares, empresas gestionadas por sus propietarios, empresas que cotizan en bolsa o entidades internacionales, nuestro objetivo es trabajar en estrecha colaboración con nuestros clientes y ayudarlos a alcanzar sus ambiciones. Nuestros clientes incluyen empresas que cotizan en bolsa y privadas, entidades gubernamentales y organizaciones de inversión como firmas de capital privado y fondos de cobertura.',
+    'corporateFinance.overview.approach': 'Nos vemos como sus socios, en lugar de proveedores de servicios, y estamos aquí para apoyarlo durante todo el ciclo de vida de su negocio, ya sea en Estrategia Corporativa, Fusiones y Adquisiciones, Valoraciones, Due Diligence, Recaudación de Capital u Ofertas Públicas Iniciales (OPI).',
+    'corporateFinance.services.title': 'Nuestros Servicios',
+    'corporateFinance.services.subtitle': 'Soluciones financieras integrales adaptadas a las necesidades de su negocio',
+    'corporateFinance.services.mAndA.title': 'Fusiones y Adquisiciones',
+    'corporateFinance.services.mAndA.description': 'Orientación experta a lo largo de todo el proceso de fusiones y adquisiciones, desde la identificación y valoración de objetivos hasta la negociación e integración.',
+    'corporateFinance.services.capitalRaising.title': 'Recaudación de Capital',
+    'corporateFinance.services.capitalRaising.description': 'Asesoramiento estratégico sobre la recaudación de capital a través de acciones, deuda o instrumentos híbridos para financiar el crecimiento y la expansión.',
+    'corporateFinance.services.financialModeling.title': 'Modelado Financiero',
+    'corporateFinance.services.financialModeling.description': 'Modelado financiero avanzado para respaldar decisiones de inversión, valoraciones y planificación estratégica.',
+    'corporateFinance.services.strategicAdvisory.title': 'Asesoría Estratégica',
+    'corporateFinance.services.strategicAdvisory.description': 'Asesoramiento experto sobre estrategia corporativa, entrada en mercados e iniciativas de transformación empresarial.',
+    'corporateFinance.cta.title': '¿Listo para Transformar su Negocio?',
+    'corporateFinance.cta.subtitle': 'Programe una consulta para discutir cómo podemos ayudarlo a alcanzar sus objetivos financieros.',
     
     // Blog
     'blog.title': 'Últimas noticias',

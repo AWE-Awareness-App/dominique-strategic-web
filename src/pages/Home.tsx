@@ -2,6 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Brain, Users, TrendingUp, Calendar, ArrowRight } from 'lucide-react';
+import { CALENDLY_LINKS } from '@/config/app';
 
 const ServiceCard = ({ icon: Icon, title, description, calendlyLink }: {
   icon: any;
@@ -39,31 +40,31 @@ export const Home = () => {
       icon: Heart,
       title: t('services.happiness.title'),
       description: t('services.happiness.description'),
-      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
     },
     {
       icon: Brain,
       title: t('services.health.title'),
       description: t('services.health.description'),
-      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
     },
     {
       icon: Users,
       title: t('services.couples.title'),
       description: t('services.couples.description'),
-      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
     },
     {
       icon: TrendingUp,
       title: t('services.organization.title'),
       description: t('services.organization.description'),
-      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
     },
     {
       icon: TrendingUp,
       title: t('services.finance.title'),
       description: t('services.finance.description'),
-      calendlyLink: 'https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline'
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
     }
   ];
 
@@ -84,7 +85,7 @@ export const Home = () => {
               <Button 
                 size="lg" 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-warm text-lg px-8 py-4"
-                onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+                onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 {t('hero.cta')}
@@ -242,7 +243,9 @@ export const Home = () => {
             <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
               <img src="/logos/miami-heat8168.jpg" alt="Miami Heat" className="max-h-16 max-w-full object-contain" />
             </div>
-
+            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
+              <img src="/logos/logo192.png" alt="AWE Digital Wellness" className="max-h-16 max-w-full object-contain" />
+            </div>
           </div>
         </div>
       </section>
@@ -274,7 +277,7 @@ export const Home = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-white hover:shadow-soft text-lg px-8 py-6"
-                  onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+                  onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
                 >
                   <Calendar className="h-5 w-5 mr-2" />
                   {t('contact.scheduleCall')}
@@ -299,7 +302,7 @@ export const Home = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-warm text-lg px-12 py-4"
-              onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+              onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
             >
               <Calendar className="h-5 w-5 mr-2" />
               {t('contact.scheduleCall')}

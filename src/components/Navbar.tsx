@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSelector } from '@/components/LanguageSelector';
-import { Heart, Menu } from 'lucide-react';
+import { Heart, Menu, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { CALENDLY_LINKS } from '@/config/app';
 
 export const Navbar = () => {
   const { t } = useLanguage();
@@ -28,13 +29,19 @@ export const Navbar = () => {
       >
         {t('nav.contact')}
       </Link>
+      <Link 
+        to="/corporate-finance" 
+        className="flex items-center text-white hover:text-primary-soft transition-colors font-medium"
+      >
+        {t('nav.corporateFinance')}
+      </Link>
       <Button 
         asChild 
         variant="secondary" 
         className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-        onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+        onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
       >
-        <a href="https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline" target="_blank" rel="noopener noreferrer">
+        <a href={CALENDLY_LINKS.ONE_HOUR_CONSULT} target="_blank" rel="noopener noreferrer">
           {t('hero.cta')}
         </a>
       </Button>

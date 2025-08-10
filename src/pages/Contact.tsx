@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CALENDLY_LINKS } from '@/config/app';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -242,7 +243,7 @@ export const Contact = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-gradient-hero shadow-soft"
-                    onClick={() => window.open('https://calendly.com/christian-coach/1-hour-consult?embed_domain=dominiquestrategic.com&embed_type=Inline', '_blank')}
+                    onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
                   >
                     <Calendar className="h-5 w-5 mr-2" />
                     {t('contact.scheduleCallButton')}

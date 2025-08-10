@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import BlogPostPage from "./pages/blog/[slug]";
+import { CorporateFinance } from "./pages/CorporateFinance";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
                   } 
                 />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/corporate-finance" element={<CorporateFinance />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
