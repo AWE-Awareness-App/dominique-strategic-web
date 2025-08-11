@@ -243,7 +243,7 @@ export const Contact = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-gradient-hero shadow-soft"
-                    onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
+                    onClick={() => window.open(CALENDLY_LINKS.FREE_CONSULTATION, '_blank')}
                   >
                     <Calendar className="h-5 w-5 mr-2" />
                     {t('contact.scheduleCallButton')}

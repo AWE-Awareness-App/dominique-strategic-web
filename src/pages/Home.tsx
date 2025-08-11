@@ -264,7 +264,7 @@ export const Home = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-warm text-lg px-12 py-4"
-              onClick={() => window.open(CALENDLY_LINKS.ONE_HOUR_CONSULT, '_blank')}
+              onClick={() => window.open(CALENDLY_LINKS.FREE_CONSULTATION, '_blank')}
             >
               <Calendar className="h-5 w-5 mr-2" />
               {t('contact.scheduleCall')}
