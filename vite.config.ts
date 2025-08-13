@@ -11,17 +11,32 @@ export default defineConfig(({ mode }) => {
       port: 8080,
       proxy: {
         '/api': {
-          target: 'http://localhost:3000', // Your backend server
+          target: 'http://localhost:3000',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '')
         }
       },
-      // @ts-ignore - This is a valid Vite server option
-      historyApiFallback: true
+      // Enable client-side routing
+      fs: {
+        strict: false
+      }
     },
+    // Configure the base public path when served in production
+    base: '/',
     preview: {
-      // @ts-ignore - This is a valid Vite preview option
-      historyApiFallback: true
+      port: 8080,
+      // Handle SPA fallback for preview server
+      proxy: {
+        '^/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        },
+        '^/.*': {
+          target: '/',
+          rewrite: () => '/index.html'
+        }
+      }
     },
     plugins: [
       react(),
