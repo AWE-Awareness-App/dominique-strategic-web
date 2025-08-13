@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
       }
     },
     // Configure the base public path when served in production
-    base: '/',
+    base: process.env.NODE_ENV === 'production' ? '/' : '/',
     preview: {
       port: 8080,
       // Handle SPA fallback for preview server
