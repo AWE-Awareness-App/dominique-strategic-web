@@ -6,9 +6,14 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const config: UserConfig = {
+    // Base public path when served in production
+    base: '/',
+    
+    // Development server configuration
     server: {
       host: "::",
       port: 8080,
+      strictPort: true,
       proxy: {
         '/api': {
           target: 'http://localhost:3000',
@@ -16,13 +21,10 @@ export default defineConfig(({ mode }) => {
           rewrite: (path) => path.replace(/^\/api/, '')
         }
       },
-      // Enable client-side routing
       fs: {
         strict: false
       }
     },
-    // Configure the base public path when served in production
-    base: process.env.NODE_ENV === 'production' ? '/' : '/',
     preview: {
       port: 8080,
       // Handle SPA fallback for preview server
