@@ -50,34 +50,40 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-primary/95 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-white">
-            <img src="/logo-white.png" alt="Logo" className="h-12" />
+          {/* Logo - Takes priority on mobile */}
+          <Link to="/" className="flex-shrink-0 z-10">
+            <img src="/logo-white.png" alt="Logo" className="h-10 md:h-12" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <NavLinks />
-            <LanguageSelector />
-          </div>
+          {/* Mobile Navigation - Pushed to the right */}
+          <div className="flex-1 flex justify-end items-center space-x-3 md:space-x-6">
+            {/* Desktop Navigation - Hidden on mobile */}
+            <div className="hidden md:flex items-center space-x-6">
+              <NavLinks />
+            </div>
+            
+            {/* Language Selector - Positioned absolutely on mobile */}
+            <div className="relative z-20">
+              <LanguageSelector />
+            </div>
 
-          {/* Mobile Navigation */}
-          <div className="flex md:hidden items-center space-x-4">
-            <LanguageSelector />
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-gradient-to-b from-primary to-accent text-white">
-                <div className="mt-8">
-                  <NavLinks mobile />
-                </div>
-              </SheetContent>
-            </Sheet>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-white">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-gradient-to-b from-primary to-accent text-white">
+                  <div className="mt-8">
+                    <NavLinks mobile />
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>
