@@ -4,10 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Heart, Brain, Users, TrendingUp, Calendar, ArrowRight } from 'lucide-react';
 import { CALENDLY_LINKS } from '@/config/app';
 
-const ServiceCard = ({ icon: Icon, title, description, calendlyLink }: {
+const ServiceCard = ({ icon: Icon, title, description, calendlyLinkText, calendlyLink }: {
   icon: any;
   title: string;
   description: string;
+  calendlyLinkText: string;
   calendlyLink: string;
 }) => (
   <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm">
@@ -26,7 +27,7 @@ const ServiceCard = ({ icon: Icon, title, description, calendlyLink }: {
         onClick={() => window.open(calendlyLink, '_blank')}
       >
         <Calendar className="h-4 w-4 mr-2" />
-        Book Session
+        {calendlyLinkText}
       </Button>
     </CardContent>
   </Card>
@@ -40,31 +41,36 @@ export const Home = () => {
       icon: Heart,
       title: t('services.happiness.title'),
       description: t('services.happiness.description'),
-      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT,
+      calendlyLinkText: t('hero.cta')
     },
     {
       icon: Brain,
       title: t('services.health.title'),
       description: t('services.health.description'),
-      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT,
+      calendlyLinkText: t('hero.cta')
     },
     {
       icon: Users,
       title: t('services.couples.title'),
       description: t('services.couples.description'),
-      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
+      calendlyLink: CALENDLY_LINKS.FAMILY_CARE,
+      calendlyLinkText: t('services.couples.cta')
     },
     {
       icon: TrendingUp,
       title: t('services.organization.title'),
       description: t('services.organization.description'),
-      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
+      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT,
+      calendlyLinkText: t('hero.cta')
     },
     {
       icon: TrendingUp,
       title: t('services.finance.title'),
       description: t('services.finance.description'),
-      calendlyLink: CALENDLY_LINKS.ONE_HOUR_CONSULT
+      calendlyLink: CALENDLY_LINKS.CORPORATE_FINANCE,
+      calendlyLinkText: t('hero.cta')
     }
   ];
 
