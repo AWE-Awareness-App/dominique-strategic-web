@@ -222,8 +222,8 @@ export const Home = () => {
       {/* Logos Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t('logos.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -231,34 +231,42 @@ export const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-center">
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/601Analytics.jpg" alt="601 Analytics" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/Carebook.jpg" alt="Carebook" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/Cura_2.jpg" alt="Cura" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/HAPLY-1.jpg" alt="HAPLY" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/HEC_bigger-1.jpg" alt="HEC" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/KineSixVR.jpg" alt="KineSix VR" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/McGill-1.jpg" alt="McGill University" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/miami-heat8168.jpg" alt="Miami Heat" className="max-h-16 max-w-full object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32">
-              <img src="/logos/logo192.png" alt="AWE Digital Wellness" className="max-h-16 max-w-full object-contain" />
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 items-center">
+            {[
+              { src: '/logos/APA.png', alt: 'American Psychological Association' },
+              { src: '/logos/CPA.png', alt: 'Canadian Psychological Association' },
+              { src: '/logos/Carebook.jpg', alt: 'Carebook' },
+              { src: '/logos/Cura_2.jpg', alt: 'Cura' },
+              { src: '/logos/HAPLY-1.jpg', alt: 'HAPLY Robotics' },
+              { src: '/logos/HEC_bigger-1.jpg', alt: 'HEC Montreal' },
+              { src: '/logos/IASR.jpg', alt: 'International Academy of Sex Research' },
+              { src: '/logos/KineSixVR.jpg', alt: 'KineSix VR' },
+              { src: '/logos/McGill-1.jpg', alt: 'McGill University' },
+              { src: '/logos/PhonixHealth.png', alt: 'Phonix Health' },
+              { src: '/logos/ensci.png', alt: 'ENSCI' },
+              { src: '/logos/esense.png', alt: 'eSense' },
+              { src: '/logos/miami-heat8168.jpg', alt: 'Miami Heat' },
+              { src: '/logos/logo192.png', alt: 'AWE Digital Wellness' },
+              { src: '/logos/601Analytics.jpg', alt: '601 Analytics' },
+              { src: '/logos/sfn.png', alt: 'Society for Neuroscience' }
+            ].map((logo, index) => (
+              <div 
+                key={index} 
+                className="flex items-center justify-center p-4 bg-muted/20 rounded-lg hover:bg-muted/30 transition-colors h-32 hover:shadow-md"
+              >
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="max-h-16 max-w-full object-contain"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNnYtNmgtMnY2SDZ2Mmg2djZoLTIiPjwvc3ZnPg==';
+                    target.className = 'w-full h-full bg-gray-100 p-10';
+                  }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
