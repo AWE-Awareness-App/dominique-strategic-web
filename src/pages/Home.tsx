@@ -59,6 +59,13 @@ export const Home = () => {
       calendlyLinkText: t('services.couples.cta')
     },
     {
+      icon: Users,
+      title: t('services.family.title'),
+      description: t('services.family.description'),
+      calendlyLink: CALENDLY_LINKS.FAMILY_CARE,
+      calendlyLinkText: t('services.family.cta')
+    },
+    {
       icon: TrendingUp,
       title: t('services.organization.title'),
       description: t('services.organization.description'),
