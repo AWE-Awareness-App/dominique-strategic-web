@@ -245,7 +245,6 @@ export const Home = () => {
               { src: '/logos/PhonixHealth.png', alt: 'Phonix Health' },
               { src: '/logos/ensci.png', alt: 'ENSCI' },
               { src: '/logos/esense.png', alt: 'eSense' },
-              { src: '/logos/miami-heat8168.jpg', alt: 'Miami Heat' },
               { src: '/logos/logo192.png', alt: 'AWE Digital Wellness' },
               { src: '/logos/601Analytics.jpg', alt: '601 Analytics' },
               { src: '/logos/sfn.png', alt: 'Society for Neuroscience' }
